@@ -32,18 +32,30 @@ public class Author {
                 '}';
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return name.equals(author.name);
+        return name.equals(author.name) && secondName.equals(author.secondName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(name, secondName);
     }
+
+    //    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Author author = (Author) o;
+//        return name.equals(author.name);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(name);
+//    }
 }
 

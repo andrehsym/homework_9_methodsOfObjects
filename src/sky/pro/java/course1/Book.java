@@ -43,11 +43,23 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return title.equals(book.title);
+        return publishingYear == book.publishingYear && title.equals(book.title) && author.equals(book.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title);
+        return Objects.hash(title, publishingYear, author);
     }
+    //    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Book book = (Book) o;
+//        return title.equals(book.title);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(title);
+//    }
 }
