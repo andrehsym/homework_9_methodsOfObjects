@@ -19,10 +19,19 @@ public class Author {
         return this.secondName;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Имя автора: " + this.name + ". Фамилия автора: " + this.secondName;
+//    }
+
     @Override
     public String toString() {
-        return "Имя автора: " + this.name + ". Фамилия автора: " + this.secondName;
+        return "Автор: {" +
+                "Имя: '" + name + '\'' +
+                ", фамилия '" + secondName + '\'' +
+                '}';
     }
+
 
     @Override
     public boolean equals(Object o) {

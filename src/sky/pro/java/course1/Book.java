@@ -3,12 +3,14 @@ package sky.pro.java.course1;
 import java.util.Objects;
 
 public class Book {
-    private String title;
+    private final String title;
     private int publishingYear;
+    private final Author author;
 
     public Book(String title, int publishingYear, Author author) {
         this.title = title;
         this.publishingYear = publishingYear;
+        this.author = author;
     }
 
     public String getTitle() {
@@ -23,9 +25,17 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
+
     @Override
     public String toString() {
-        return "Название книги: " + this.title + ". Год публикации: " + this.publishingYear;
+        return "Книга {" +
+                "Название: '" + title + '\'' +
+                ". Год публикации: " + publishingYear +
+                ". Автор: " + author +
+                '}';
     }
 
     @Override
